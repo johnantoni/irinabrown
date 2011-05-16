@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+	  <title>Irina Brown | Photography Showcase</title>
+    <meta name="copyright" content="Copyright <%=Time.now.year%> Irina Brown - PhotoSomething.com" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <meta name="Coverage" content="UK, CA, USA"/>
+    <meta name="Content-Language" content="en"/>
+    <meta name="robots" content="all" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+	  
+    <script type="text/javascript" src="http://use.typekit.com/inp3gku.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>	  
+
+	  <link rel="stylesheet" href="css/galleriffic-2.css" type="text/css">
+	  <link rel="stylesheet" href="css/screen.css" type="text/css">
+	  
+  	<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+  	<script type="text/javascript" src="js/jquery.opacity.js"></script>
+  	<script type="text/javascript" src="js/jquery.gallerific.js"></script>
+
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				// We only want these styles applied when javascript is enabled
+				$('div.navigation').css({'width' : '300px', 'float' : 'left'});
+				$('div.content').css('display', 'block');
+
+				// Initially set opacity on thumbs and add
+				// additional styling for hover effect on thumbs
+				var onMouseOutOpacity = 0.67;
+				$('#thumbs ul.thumbs li').opacityrollover({
+					mouseOutOpacity:   onMouseOutOpacity,
+					mouseOverOpacity:  1.0,
+					fadeSpeed:         'fast',
+					exemptionSelector: '.selected'
+				});
+
+				// Initialize Advanced Galleriffic Gallery
+				var gallery = $('#thumbs').galleriffic({
+					delay:                     2500,
+					numThumbs:                 15,
+					preloadAhead:              10,
+					enableTopPager:            true,
+					enableBottomPager:         true,
+					maxPagesToShow:            7,
+					imageContainerSel:         '#slideshow',
+					controlsContainerSel:      '#controls',
+					captionContainerSel:       '#caption',
+					loadingContainerSel:       '#loading',
+					renderSSControls:          true,
+					renderNavControls:         true,
+					playLinkText:              'Play Slideshow',
+					pauseLinkText:             'Pause Slideshow',
+					prevLinkText:              '&lsaquo; Previous Photo',
+					nextLinkText:              'Next Photo &rsaquo;',
+					nextPageLinkText:          'Next &rsaquo;',
+					prevPageLinkText:          '&lsaquo; Prev',
+					enableHistory:             false,
+					autoStart:                 false,
+					syncTransitions:           true,
+					defaultTransitionDuration: 900,
+					onSlideChange:             function(prevIndex, nextIndex) {
+						// 'this' refers to the gallery, which is an extension of $('#thumbs')
+						this.find('ul.thumbs').children()
+							.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+							.eq(nextIndex).fadeTo('fast', 1.0);
+					},
+					onPageTransitionOut:       function(callback) {
+						this.fadeTo('fast', 0.0, callback);
+					},
+					onPageTransitionIn:        function() {
+						this.fadeTo('fast', 1.0);
+					}
+				});
+			});
+		</script>
+	  
+	</head>
+<body>
+
+	<div id="page">
+		<div id="container">
+			<h1 class="header">
+			  <a href="index.html" title="Back to Homepage">Irina Brown</a>
+			  <span class="block">
+		      <span>01206 577456</span>
+		      <span><a href="mailto:ig@photosomething.com" title="Email me at ig@photosomething.com">ig@photosomething.com</a></span>
+		    </span>
+			</h1>
+
+			<h2 class="nav"><a class="current" href="photography.html" title="View Studio Photography gallery">Studio Photography</a> &amp; <a href="lifestyle.html" title="View Lifestyle gallery">Lifestyle</a></h2>
+
+			<!-- Start Advanced Gallery Html Containers -->
+			<div id="gallery" class="content">
+				<div id="controls" class="controls"></div>
+				<div class="slideshow-container">
+					<div id="loading" class="loader"></div>
+					<div id="slideshow" class="slideshow"></div>
+				</div>
+
+				<div id="caption" class="caption-container"></div>
+			</div>
+
+			<div id="thumbs" class="navigation">
+				<ul class="thumbs noscript">
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image1.jpg" title="Studio #1">
+							<img src="images/photography/image1_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image2.jpg" title="Studio #2">
+							<img src="images/photography/image2_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image3.jpg" title="Studio #3">
+							<img src="images/photography/image3_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image4.jpg" title="Studio #4">
+							<img src="images/photography/image4_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image5.jpg" title="Studio #5">
+							<img src="images/photography/image5_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image6.jpg" title="Studio #6">
+							<img src="images/photography/image6_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image7.jpg" title="Studio #7">
+							<img src="images/photography/image7_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image8.jpg" title="Studio #8">
+							<img src="images/photography/image8_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image9.jpg" title="Studio #9">
+							<img src="images/photography/image9_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image10.jpg" title="Studio #10">
+							<img src="images/photography/image10_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image11.jpg" title="Studio #11">
+							<img src="images/photography/image11_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+					<li>
+						<a class="thumb" name="leaf" href="images/photography/image12.jpg" title="Studio #12">
+							<img src="images/photography/image12_s.jpg" alt="Studio" />
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+
+	<div id="footer">Copyright &copy; <%=Time.now.year%> <a href="mailto:ig@photosomething.com" title="Email me at photosomething.com">photosomething.com</a></div>
+
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-393335-28");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+    
+</body>
+</html>
